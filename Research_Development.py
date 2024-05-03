@@ -46,8 +46,8 @@ if authentication_status:
     Rad= st.sidebar.radio("CONTENTS",["Title page","Introduction","Detailed Structure","About us"])
     if Rad== "Title page":
         st.write(" Author: David Hagumuwumva",layout="wide")
-        st.write(" Institution: BNR")
-        st.write(" Department: Financial Stability Monitoring")
+        st.write(" Institution: ....")
+        st.write(" Department: ....")
 
     if Rad=="Introduction":
         import streamlit as st
