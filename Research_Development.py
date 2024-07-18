@@ -43,7 +43,7 @@ if authentication_status:
     with open("style.css") as css:
         st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 #####################################################################################
-    Rad= st.sidebar.radio("CONTENTS",["Title page","Introduction","Detailed Structure","About us"])
+    Rad= st.sidebar.radio("CONTENTS",["Title page","Introduction","Classifications","ISIC structure","Demo For Financing Wheat","Key Notes"])
     if Rad== "Title page":
         st.write(" Author: David Hagumuwumva",layout="wide")
         st.write(" Institution: ....")
@@ -59,7 +59,35 @@ if authentication_status:
         with col2:
             st.header("Why ISIC, Rev.4?")
             st.write("In comparison with previous version of ISIC, the ISCI revision 4 is more detailed than the previous version, responding to the need to identify many new industries separately. This is especially applicable in the case of services. Moreover, the relevance of the Classification has been enhanced with the introduction of new high-level categories to better reflect current economic phenomena. A new section entitled “Information and communication” has been introduced.")
-    if Rad=="Detailed Structure":
+    if Rad=="Classifications":
+            st.header("1. Two international standards classification")
+            st.write("There are two ways of loan classification recommended;")
+            st.write("1. IMF macroeconomic statistics manuals (BOP, GFS and MFS): based on institutional sectors or WHO borrowed NOT Who will be the final beneficiary")
+            st.write("2. The UN International Standard Industrial Classification of All Economic Activities (ISIC Rev 4): based on WHAT or the economic activity or sector to be financed (PURPOSE/UTILISATION of the loan).")
+
+            st.header("1.1 Classification according to WHO borrowed (Institutional Sectors)")
+            st.write("Non-financial corporations (Private & Public): Principally engaged in the production of market goods and non-financial services;")
+            st.write("Financial corporations (Deposit-taking institutions, Insurance & Pensions and Other financial intermediaries): Principally engaged in financial services including financial intermediation;")
+            st.write("General government (GG): Fulfill political responsibility and economic regulation, but also produces services (and possibly goods) for individual or collective consumption mainly on non-market basis and redistribute income and wealth.")
+            st.write("Households: Supply labor, undertake final consumption, and can produce market goods and non-financial (and possibly financial) services (unincorporated enterprises)")
+            st.write("Non-profit institutions serving households: produce non-market services for households and community. Their resources come from voluntarily contributions")
+            st.header("1.2 Classification according to WHAT was financed")
+            st.write(" ISIC is an international reference for classification of productive activities(Principal activities, Secondary activities and Auxiliary activities). It provides a set of activity categories that can be utilized for the collection and reporting of statistics according to such activities.")
+
+    if Rad=="ISIC structure":
+            st.header("ISIC Rev.4 categories")
+            st.write("Sections= 21")
+            st.write("Divisions = 88")
+            st.write("Groups= 238")
+            st.write("Classes = 419")
+            st.write("Note: You can extend to level 6; 702 subclasses")
+    if Rad=="Key Notes":
+            st.write("Classification of Government activities: Classify them in their appropriate class of ISIC and not in division 84(i.e Public admin); For example public hospitals  should be assigned to ISIC 8610")
+            st.write("Classification of multi-activity Enterprise: Should be classified according to share of the value added")
+            st.write("Classification of a household activities: Employers of domestic personnel i.e. maids, cooks, gardeners security guard etc. In addition, Household activities of producing goods/services for market should be classified in their appropriate ISIC class activities. Moreover, Household activities of producing goods/services for own use  should be classified in class of household activities")
+            st.write("Construction:")
+            st.write("Extratertorial: International organization")
+    if Rad=="Demo For Financing Wheat":
         option = st.selectbox(
             'LEVEL 1:',
             ( " ",  "A. Agriculture, forestry and fishing", "B. Mining and quarrying ", "C. Manufacturing ",
@@ -120,16 +148,16 @@ if authentication_status:
 
 
 
-    if Rad=="About us":
-        st.header("About us")
-        progress= st.progress(0)
-        for i in range(100):
-            time.sleep(0.1)
-            progress.progress(i+1)
-        st.balloons()#Ballon after annimations
-        st.error("Error message")
-        st.success("Success")
-        st.info("information")
-        st.warning("Warning")
+    # if Rad=="About us":
+    #     st.header("About us")
+    #     progress= st.progress(0)
+    #     for i in range(100):
+    #         time.sleep(0.1)
+    #         progress.progress(i+1)
+    #     st.balloons()#Ballon after annimations
+    #     st.error("Error message")
+    #     st.success("Success")
+    #     st.info("information")
+    #     st.warning("Warning")
 
 
