@@ -5,4 +5,4 @@ plotly==4.10.0
 streamlit==1.10.0
 kaleido
 openpyxl
-streamlit_authenticator
+streamlit_authenticator== 0.3.2
