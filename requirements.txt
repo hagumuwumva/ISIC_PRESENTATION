@@ -2,7 +2,7 @@ seaborn==0.10.1
 jupyterlab==2.2.6
 bokeh==2.2.1
 plotly==4.10.0
-streamlit==1.10.0
+streamlit==1.25.0
 kaleido
 openpyxl
 streamlit_authenticator== 0.3.2
